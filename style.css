@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url("bootstrap.css");
+@import url("animate.css");
+@import url("onepage-scroll.css");
+
+body {background: #0f0f0f; margin: 0 !important; padding: 0 !important}
+a:hover {text-decoration: none}
+
+.center {display: flex; justify-content: center; align-items: center}
+
+.pagination-active .onepage-pagination li a {opacity: 1}
+.pagination-active .main-official .page1 .introduction {opacity: 1}
+.mopage1 .container center {opacity: 1; transition: 2s ease 0.5s}
+.motpage1 .container center {opacity: 0; transition: 1s ease 0.5s; margin-top: 90vh}
+
+.main {background: #6F6F6F; top: 0; left: 0; bottom: 0; right: 0; overflow: hidden}
+.main p {margin: auto}
+.main .enter {background: #FF7173; position: absolute; top: 40%; left: 32%; bottom: 40%; right: 32%; overflow: hidden; text-align: center; z-index: 1}
+.main .fadeOut {background: #FF7173; position: absolute; top: 40%; left: 32%; bottom: 40%; right: 32%; overflow: hidden; text-align: center; -webkit-animation: fadeOut 1s linear; animation: fadeOut 1s linear; opacity: 0%; z-index: -1}
+@keyframes fadeOut {0%{opacity: 100%; z-index: 1} 100%{opacity: 0%; z-index: 1}}
+
+.main .door .left-door-open {background: #FFA600; position: absolute; top: 0; bottom: 0; left: 0; right: 50%; animation: leftopen 3s ease 1.25s forwards}
+.main .door .right-door-open {background: #017CFF; position: absolute; top: 0; bottom: 0; left: 50%; right: 0; animation: rightopen 3s ease 1.25s forwards}
+
+@keyframes leftopen {
+0%{background: #FFA600; position: absolute; top: 0; bottom: 0; left: 0; right: 50%}
+100%{background: #FFA600; position: absolute; top: 0; bottom: 0; left: 0; right: 100%}
+}
+
+@keyframes rightopen {
+0%{background: #017CFF; position: absolute; top: 0; bottom: 0; left: 50%; right: 0}
+100%{background: #017CFF; position: absolute; top: 0; bottom: 0; left: 100%; right: 0}
+}
+
+.main .door .left-door{background: #FFA600; position: absolute; top: 0; bottom: 0; left: 0; right: 50%}
+.main .door .right-door{background: #017CFF; position: absolute; top: 0; bottom: 0; left: 50%; right: 0}
+
+
+.main-official{float: left; width: 100%; margin: 0 auto; z-index: -1}
+.main-official .page1 {background:#FF7173; width: 100vw; height: 100vh}
+.main-official .page2 {background:#F8D17E; width: 100vw; height: 100vh}
+.main-official .page3 {background:#72F1DF; width: 100vw; height: 100vh}
+
+.main-official .page1 .introduction {margin-top: 20vh; text-align: center; opacity: 0; transition: 4s ease 2.25s}
+.main-official .page1 .introduction h1 {margin-bottom: 40px}
+.main-official .page1 .introduction p {font-size: 17px; text-align:justify; margin-top: 20px}
+
+.main-official .page2 h1 {margin-top: 20px; margin-bottom: 40px}
+.main-official .page2 .work-selection {height: 60vh}
+
+.main-official .page2 .porfolio {background: #442BE5}
+.main-official .page2 .project {background: #D5AD49}
+.main-official .page2 .games {background: #D49FF7}
+.main-official .page2 .media {background: #FF0000}
+.main-official .page2 .life {background: #63D1FF}
+
+.main-official .page3 .up-footer {margin-top: 30vh; width: 35vw; height: 100px}
+.main-official .page3 .up-footer img {width: 13px; height: 13px}
+.main-official .page3 .footer-left {border-right: 1px #FFF dotted; border-bottom: 1px #FFF dotted}
+.main-official .page3 .footer-left p {text-align: right; float: right}
+.main-official .page3 .footer-right {border-left: 1px #FFF dotted; border-bottom: 1px #FFF dotted}
+.main-official .page3 .footer-right p {text-align: left}
+.main-official .page3 .footer {text-align: center; position: absolute; bottom: 0}
+
+.main-official .page3 .contact {text-align: center}
+.main-official .page3 .contact h1 {padding-top: 10vh}
+
+@media (max-width: 768px) {
+.main-official .page1 .introduction p {font-size: 14px}
+.main-official .page3 .up-footer p {font-size: 10px}
+.main-official .page1 .introduction {margin-top: 18vh; text-align: center}
+.main-official .page2 .work-selection {height: 25vh}
+.main-official .page3 .up-footer {margin-top: 30vh; width: 35vw; height: 70px}
+}
